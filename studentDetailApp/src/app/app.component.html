@@ -1,0 +1,40 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="jumbotron">
+    <h2 style="vertical-align:top">{{title}}!</h2>
+    <i><p>One Stop to Manage your Students.</p></i>
+  </div>
+
+  <nav class="navbar navbar-toggleable-md navbar-light">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+    <a class="navbar-brand" href="#">Student Details</a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#" [routerLink]="['/']">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#" [routerLink]="['/studentdetails']">Student Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#" [routerLink]="['/enrollmenthistory']">Enrollment Details</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" href="#" [routerLink]="['/assignmenthistory']">Assignment History</a>
+        </li> -->
+      </ul>
+    </div>
+
+  </nav>
+
+</div>
+
+<section>
+  <div class="well">
+    <router-outlet></router-outlet>
+  </div>
+</section>

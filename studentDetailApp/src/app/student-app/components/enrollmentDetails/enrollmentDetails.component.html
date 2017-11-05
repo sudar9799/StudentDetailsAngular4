@@ -1,0 +1,33 @@
+<div class="container">
+    <h2>Welcome {{userName}}!</h2>
+
+    <h3>Enrollment History Details of {{studentName}}:</h3>
+    <div class="table-responsive">
+        <table class="table enrollmentTable">
+            <thead>
+                <tr>
+                    <th>Entry Date</th>
+                    <th>Exit Date</th>
+                    <th>Exit Reason</th>
+                </tr>
+            </thead>
+            <tbody class="enrollmentData" style="text-align:left">
+                <tr *ngFor="let enrollment of studentServices.enrollmentHistory">
+                    <td>{{enrollment.entryDate}}</td>
+                    <td>{{enrollment.exitDate}}</td>
+                    <td>{{enrollment.exitReason}}</td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <button class="btn btn-primary" id="btn1" (click)="getAllStudents()">Go Back</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        Powered with Angular 4. Copyrights by, Sudarson.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

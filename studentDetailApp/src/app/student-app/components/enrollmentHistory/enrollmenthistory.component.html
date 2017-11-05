@@ -1,0 +1,50 @@
+<div class="container">
+    <h2>Welcome {{username}}!</h2>
+
+    <!-- <h3>Enrollment History Details:</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Entry Date</th>
+                    <th>Exit Date</th>
+                    <th>Exit Reason</th>                    
+                </tr>
+            </thead>
+            <tbody style="text-align:left">
+                <tr *ngFor="let enrollment of studentServices.enrollmentHistory">
+                    <td>{{enrollment.entryDate}}</td>
+                    <td>{{enrollment.exitDate}}</td>
+                    <td>{{enrollment.exitReason}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div> -->
+
+    <h3>Assignment History Details:</h3>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Assignment Name</th>
+                    <th>Due Date</th>
+                    <th>Max Score</th>                    
+                    <th>Completion Date</th>
+                    <th>Scores Earned</th>
+                </tr>
+            </thead>
+            <tbody style="text-align:left">
+                <tr *ngFor="let assignment of studentServices.assignmentHistory">
+                    <td>{{assignment.assignmentName}}</td>
+                    <td>{{assignment.dueDate}}</td>
+                    <td>{{assignment.maxScore}}</td>
+                    <td>{{assignment.completionDate}}</td>
+                    <td>{{assignment.scoresEarned}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <footer>
+        <h2>You can create your <a [routerLink]="['/createurpoll']">Own Poll </a> here..</h2>
+    </footer>
+</div>

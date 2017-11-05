@@ -1,0 +1,38 @@
+<div class="container">
+    <h2>Welcome {{userName}}!</h2>
+
+    <h3>Assignment History Details of {{studentName}}:</h3>
+    <div class="table-responsive">
+        <table class="table assignmentTable">
+            <thead>
+                <tr>
+                    <th>Assignment Name</th>
+                    <th>Due Date</th>
+                    <th>Max Score</th>
+                    <th>Completion Date</th>
+                    <th>Scores Earned</th>
+                </tr>
+            </thead>
+            <tbody class="dataPopulation" style="text-align:left">
+                <tr *ngFor="let assignment of studentServices.assignmentHistory">
+                    <td>{{assignment.assignmentName}}</td>
+                    <td>{{assignment.dueDate}}</td>
+                    <td>{{assignment.maxScore}}</td>
+                    <td>{{assignment.completionDate}}</td>
+                    <td>{{assignment.scoresEarned}}</td>
+                </tr>
+                <tr>
+                    <td colspan="5">
+                        <button class="btn btn-primary" id="btn1" (click)="getAllStudents()">Go Back</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="5">
+                        Powered with Angular 4. Copyrights by, Sudarson.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
